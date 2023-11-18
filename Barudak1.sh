@@ -22,17 +22,6 @@ apt-get update\
   echo "Bismillahirahmannirrahim"
   echo "====================================="
   sleep 5
-wget https://www.inet.no/dante/files/dante-1.4.2.tar.gz
-tar zxvf dante-1.4.2.tar.gz
-cd dante-1.4.2
-./configure
-make -j`nproc`
-make install
-
-  echo "====================================="
-  echo "Bismillahirahmannirrahim"
-  echo "====================================="
-  sleep 5
 apt-get update\
   && apt-get -y install vim dnsutils curl sudo\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
